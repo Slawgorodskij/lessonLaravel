@@ -1,6 +1,10 @@
 <?php
 
+use App\Http\Controllers\CategoryNewsController;
+use App\Http\Controllers\OneCategoryNewsController;
+use App\Http\Controllers\OneNewsController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +17,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [HomeController::class, 'index']);
+Route::get('/category', [CategoryNewsController::class, 'category']);
+Route::get('/{nameCategory}', [OneCategoryNewsController::class, 'oneCategory']);
+Route::get('/{nameCategory}/{idNews}', [OneNewsController::class, 'oneNews']);
+
+
