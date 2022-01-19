@@ -1,9 +1,14 @@
 @section('footer')
     <footer>
+
         <div class="footer">
             <div class="footer__row container">
                 <p class="footer__text">© 2021 Славгородский В.В.</p>
                 <div class="footer__social social">
+        <div class="footer-bottom">
+            <div class="footer-bottom__row container">
+                <p class="footer-bottom__text">© 2021 Brand All Rights Reserved.</p>
+                <div class="footer-bottom__social social">
                     <a href="#" class="social__item">
                         <svg class="social__icon social__icon_facebook" width="8" height="15">
                             <path

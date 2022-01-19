@@ -14,6 +14,7 @@
 </head>
 <body>
 @include('templates.header')
+
 @include('templates.introduction')
 
 <main class="page__body container">
