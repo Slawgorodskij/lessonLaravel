@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
-    <title>BRAND</title>
+    <title>СлавныеНовости</title>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link
@@ -15,9 +15,10 @@
 <body>
 @include('templates.header')
 
-<main>
-@yield('content')
+@include('templates.introduction')
 
+<main class="page__body container">
+    @yield('content')
 </main>
 
 @include('templates.footer')
