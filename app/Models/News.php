@@ -14,11 +14,15 @@ class News extends Model
         'title',
         'description',
         'news_body',
-        'slug'
     ];
 
     public function category()
     {
         return $this->belongsTo(Category::class);
+    }
+
+    public function comment()
+    {
+      return $this->hasMany(Comment::class)->orderBy('created_at');
     }
 }
