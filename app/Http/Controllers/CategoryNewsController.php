@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use Illuminate\Http\Request;
 
 class CategoryNewsController extends Controller
@@ -10,9 +11,11 @@ class CategoryNewsController extends Controller
 
     public function category()
     {
+        $listCategories = Category::orderBy('title')->get();
+
         return view('category', [
             'title' => $this->title,
-            'listCategory' => '',
+            'list_categories' => $listCategories,
         ]);
     }
 }

@@ -18,8 +18,8 @@ use App\Http\Controllers\HomeController;
 */
 
 Route::get('/', [HomeController::class, 'index']);
-Route::get('/category', [CategoryNewsController::class, 'category']);
-Route::get('/{nameCategory}', [OneCategoryNewsController::class, 'oneCategory']);
-Route::get('/{nameCategory}/{idNews}', [OneNewsController::class, 'oneNews']);
+Route::get('/category', [CategoryNewsController::class, 'category'])->name('all_category');
+Route::get('/category/{id}', [OneCategoryNewsController::class, 'oneCategory'])->name('one_category');
+Route::get('/{idNews}', [OneNewsController::class, 'oneNews'])->name('one_news');
 
 
